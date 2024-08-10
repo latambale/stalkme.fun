@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StalkMe</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>StalkMe</h1>
+        <input type="text" id="usernameInput" placeholder="Enter Instagram username">
+        <button id="fetchButton">Fetch Profile Picture</button>
+        <button id="downloadButton" disabled>Download Profile Picture</button>
+        <div id="resultLabel"></div>
+        <div id="imagePopup" class="hidden">
+            <img id="profileImage" src="" alt="Profile Picture">
+            <button id="closePopup">X</button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

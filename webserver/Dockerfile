@@ -10,17 +10,13 @@ ENV FLASK_RUN_PORT=80
 WORKDIR /app
 
 # Copy the Flask application and static files
-COPY server.py /app/
-COPY index.html /app/
-COPY script.js /app/
-COPY styles.css /app/
-COPY requirements.txt /app/
+COPY . /app/
 
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Expose port 80 for the Flask app
-EXPOSE 8080
+EXPOSE 80
 
 # Command to run the Flask app
-CMD ["flask", "run", "--host=0.0.0.0", "--port=8080"]
+CMD ["flask", "run", "--host=0.0.0.0", "--port=80"]
